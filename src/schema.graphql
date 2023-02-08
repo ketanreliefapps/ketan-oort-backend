@@ -1,0 +1,1008 @@
+type _AggregationForm1Meta {
+  a_field: JSON
+  id: JSON
+  incrementalId: JSON
+  form: JSON
+  createdAt: JSON
+  modifiedAt: JSON
+  createdBy: UserMeta
+  lastUpdatedBy: UserMeta
+  canUpdate: JSON
+  canDelete: JSON
+  _source: ID
+  ag_1_field_c_of_field_a: _AggregationForm2Meta
+  field_d_of_field_a: _AggregationForm2Meta
+}
+
+type _AggregationForm2Meta {
+  field_b: JSON
+  field_c_of_field_a_ids: JSON
+  field_d_of_field_a_id: JSON
+  id: JSON
+  incrementalId: JSON
+  form: JSON
+  createdAt: JSON
+  modifiedAt: JSON
+  createdBy: UserMeta
+  lastUpdatedBy: UserMeta
+  canUpdate: JSON
+  canDelete: JSON
+  _source: ID
+  field_c_of_field_a: _AggregationForm1Meta
+  field_d_of_field_a: _AggregationForm1Meta
+}
+
+type _ChoicesByUrlMeta {
+  dropdown: JSON
+  dropdown_2: JSON
+  id: JSON
+  incrementalId: JSON
+  form: JSON
+  createdAt: JSON
+  modifiedAt: JSON
+  createdBy: UserMeta
+  lastUpdatedBy: UserMeta
+  canUpdate: JSON
+  canDelete: JSON
+  _source: ID
+}
+
+type _CountriesRefMeta {
+  name: JSON
+  value: JSON
+}
+
+type _DatasetMeta {
+  field_1: JSON
+  field_2: JSON
+  field_3: JSON
+  user_question: JSON
+  user_ques_two: JSON
+  id: JSON
+  incrementalId: JSON
+  form: JSON
+  createdAt: JSON
+  modifiedAt: JSON
+  createdBy: UserMeta
+  lastUpdatedBy: UserMeta
+  canUpdate: JSON
+  canDelete: JSON
+  _source: ID
+}
+
+type _FieldFormMeta {
+  question1: JSON
+  question2: JSON
+  question3_id: JSON
+  id: JSON
+  incrementalId: JSON
+  form: JSON
+  createdAt: JSON
+  modifiedAt: JSON
+  createdBy: UserMeta
+  lastUpdatedBy: UserMeta
+  canUpdate: JSON
+  canDelete: JSON
+  _source: ID
+  question3: _QqqqqqMeta
+}
+
+type _FileFormMeta {
+  file_question: JSON
+  id: JSON
+  incrementalId: JSON
+  form: JSON
+  createdAt: JSON
+  modifiedAt: JSON
+  createdBy: UserMeta
+  lastUpdatedBy: UserMeta
+  canUpdate: JSON
+  canDelete: JSON
+  _source: ID
+}
+
+type _FilterFormMeta {
+  id: JSON
+  incrementalId: JSON
+  form: JSON
+  createdAt: JSON
+  modifiedAt: JSON
+  createdBy: UserMeta
+  lastUpdatedBy: UserMeta
+  canUpdate: JSON
+  canDelete: JSON
+  _source: ID
+}
+
+type _MyFormSecondMeta {
+  question2: JSON
+  question1: JSON
+  id: JSON
+  incrementalId: JSON
+  form: JSON
+  createdAt: JSON
+  modifiedAt: JSON
+  createdBy: UserMeta
+  lastUpdatedBy: UserMeta
+  canUpdate: JSON
+  canDelete: JSON
+  _source: ID
+  field_my_second: _QqqqqqMeta
+}
+
+type _NewFormMeta {
+  id: JSON
+  incrementalId: JSON
+  form: JSON
+  createdAt: JSON
+  modifiedAt: JSON
+  createdBy: UserMeta
+  lastUpdatedBy: UserMeta
+  canUpdate: JSON
+  canDelete: JSON
+  _source: ID
+}
+
+type _QqqqqqMeta {
+  field_1: JSON
+  field_2: JSON
+  field_3: JSON
+  qqq_resorce_ids: JSON
+  id: JSON
+  incrementalId: JSON
+  form: JSON
+  createdAt: JSON
+  modifiedAt: JSON
+  createdBy: UserMeta
+  lastUpdatedBy: UserMeta
+  canUpdate: JSON
+  canDelete: JSON
+  _source: ID
+  qqq_resorce: _MyFormSecondMeta
+  qqq_field_1: _FieldFormMeta
+}
+
+type _RestTestRefMeta {
+  test: JSON
+}
+
+type _SecondFieldFormMeta {
+  question1: JSON
+  question2: JSON
+  question3_id: JSON
+  id: JSON
+  incrementalId: JSON
+  form: JSON
+  createdAt: JSON
+  modifiedAt: JSON
+  createdBy: UserMeta
+  lastUpdatedBy: UserMeta
+  canUpdate: JSON
+  canDelete: JSON
+  _source: ID
+  question3: _QqqqqqMeta
+}
+
+type _TestCountryRefMeta {
+  name: JSON
+}
+
+type _TestFormMeta {
+  test: JSON
+  id: JSON
+  incrementalId: JSON
+  form: JSON
+  createdAt: JSON
+  modifiedAt: JSON
+  createdBy: UserMeta
+  lastUpdatedBy: UserMeta
+  canUpdate: JSON
+  canDelete: JSON
+  _source: ID
+}
+
+type _WorkflowFormMeta {
+  id: JSON
+  incrementalId: JSON
+  form: JSON
+  createdAt: JSON
+  modifiedAt: JSON
+  createdBy: UserMeta
+  lastUpdatedBy: UserMeta
+  canUpdate: JSON
+  canDelete: JSON
+  _source: ID
+}
+
+type Access {
+  canSee: [Role]
+  canUpdate: [Role]
+  canDelete: [Role]
+  canCreateRecords: [Role]
+  canSeeRecords: [JSON]
+  canUpdateRecords: [JSON]
+  canDeleteRecords: [JSON]
+  recordsUnicity: JSON
+}
+
+type Aggregation {
+  id: ID
+  name: String
+  sourceFields: JSON
+  pipeline: JSON
+  createdAt: String
+  modifiedAt: String
+}
+
+type AggregationConnection {
+  totalCount: Int
+  edges: [AggregationEdge]
+  pageInfo: PageInfo
+}
+
+type AggregationEdge {
+  node: Aggregation
+  cursor: ID!
+  meta: JSON
+}
+
+type AggregationForm1 {
+  a_field: String
+  id: ID
+  incrementalId: ID
+  form(display: Boolean): ID
+  createdAt: DateTime
+  modifiedAt: DateTime
+  createdBy: User
+  lastUpdatedBy: User
+  canUpdate: Boolean
+  canDelete: Boolean
+  ag_1_field_c_of_field_a(filter: JSON, sortField: String, sortOrder: String, first: Int): [AggregationForm2]
+  field_d_of_field_a(filter: JSON, sortField: String, sortOrder: String, first: Int): [AggregationForm2]
+}
+
+type AggregationForm1Connection {
+  totalCount: Int
+  edges: [AggregationForm1Edge]
+  pageInfo: PageInfo
+  _source: ID
+}
+
+type AggregationForm1Edge {
+  node: AggregationForm1
+  cursor: ID!
+  meta: JSON
+}
+
+type AggregationForm2 {
+  field_b: String
+  field_c_of_field_a_ids: [ID]
+  field_d_of_field_a_id: ID
+  id: ID
+  incrementalId: ID
+  form(display: Boolean): ID
+  createdAt: DateTime
+  modifiedAt: DateTime
+  createdBy: User
+  lastUpdatedBy: User
+  canUpdate: Boolean
+  canDelete: Boolean
+  field_c_of_field_a(filter: JSON, sortField: String, sortOrder: String, first: Int): [AggregationForm1]
+  field_d_of_field_a: AggregationForm1
+}
+
+type AggregationForm2Connection {
+  totalCount: Int
+  edges: [AggregationForm2Edge]
+  pageInfo: PageInfo
+  _source: ID
+}
+
+type AggregationForm2Edge {
+  node: AggregationForm2
+  cursor: ID!
+  meta: JSON
+}
+
+type ApiConfiguration {
+  id: ID
+  name: String
+  status: Status
+  authType: AuthType
+  endpoint: String
+  graphQLEndpoint: String
+  pingUrl: String
+  settings: JSON
+  permissions: Access
+  canSee: Boolean
+  canUpdate: Boolean
+  canDelete: Boolean
+}
+
+type Application {
+  id: ID
+  name: String
+  createdAt: String
+  modifiedAt: String
+  description: String
+  status: Status
+  locked: Boolean
+  lockedBy: User
+  lockedByUser: Boolean
+  createdBy: User
+  pages: [Page]
+  roles: [Role]
+  userRoles: [Role]
+  users(first: Int, afterCursor: ID, automated: Boolean): UserConnection
+  settings: JSON
+  channels: [Channel]
+  positionAttributeCategories: [PositionAttributeCategory]
+  positionAttributes: [PositionAttribute]
+  subscriptions: [ApplicationSubscription]
+  pullJobs: [PullJob]
+  permissions: Access
+  canSee: Boolean
+  canUpdate: Boolean
+  canDelete: Boolean
+  templates: [Template]
+  distributionLists: [DistributionList]
+}
+
+type ApplicationSubscription {
+  routingKey: String
+  title: String
+  convertTo: Form
+  channel: Channel
+}
+
+enum AuthType {
+  public
+  serviceToService
+  userToService
+}
+
+type Channel {
+  id: ID
+  title: String
+  application: Application
+  subscribedRoles: [Role]
+  form: Form
+  routingKey: String
+}
+
+type ChoicesByUrl {
+  dropdown(display: Boolean): String
+  dropdown_2(display: Boolean): String
+  id: ID
+  incrementalId: ID
+  form(display: Boolean): ID
+  createdAt: DateTime
+  modifiedAt: DateTime
+  createdBy: User
+  lastUpdatedBy: User
+  canUpdate: Boolean
+  canDelete: Boolean
+}
+
+type ChoicesByUrlConnection {
+  totalCount: Int
+  edges: [ChoicesByUrlEdge]
+  pageInfo: PageInfo
+  _source: ID
+}
+
+type ChoicesByUrlEdge {
+  node: ChoicesByUrl
+  cursor: ID!
+  meta: JSON
+}
+
+enum ContentEnumType {
+  workflow
+  dashboard
+  form
+}
+
+type CountriesRef {
+  name: String
+  value: String
+}
+
+type Dataset {
+  field_1: String
+  field_2(display: Boolean): JSON
+  field_3(display: Boolean): String
+  user_question: JSON
+  user_ques_two: JSON
+  id: ID
+  incrementalId: ID
+  form(display: Boolean): ID
+  createdAt: DateTime
+  modifiedAt: DateTime
+  createdBy: User
+  lastUpdatedBy: User
+  canUpdate: Boolean
+  canDelete: Boolean
+}
+
+type DatasetConnection {
+  totalCount: Int
+  edges: [DatasetEdge]
+  pageInfo: PageInfo
+  _source: ID
+}
+
+type DatasetEdge {
+  node: Dataset
+  cursor: ID!
+  meta: JSON
+}
+
+"""
+A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the
+`date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO
+8601 standard for representation of dates and times using the Gregorian calendar.
+"""
+scalar DateTime
+
+type DistributionList {
+  id: ID
+  name: String
+  emails: [String]
+}
+
+type FieldForm {
+  question1: String
+  question2: String
+  question3_id: ID
+  id: ID
+  incrementalId: ID
+  form(display: Boolean): ID
+  createdAt: DateTime
+  modifiedAt: DateTime
+  createdBy: User
+  lastUpdatedBy: User
+  canUpdate: Boolean
+  canDelete: Boolean
+  question3: Qqqqqq
+}
+
+type FieldFormConnection {
+  totalCount: Int
+  edges: [FieldFormEdge]
+  pageInfo: PageInfo
+  _source: ID
+}
+
+type FieldFormEdge {
+  node: FieldForm
+  cursor: ID!
+  meta: JSON
+}
+
+type FieldMetaData {
+  automated: Boolean
+  name: String
+  type: String
+  editor: String
+  filter: JSON
+  filterable: Boolean
+  multiSelect: Boolean
+  canSee: Boolean
+  canUpdate: Boolean
+  options: JSON
+  fields: [FieldMetaData]
+}
+
+type FileForm {
+  file_question: JSON
+  id: ID
+  incrementalId: ID
+  form(display: Boolean): ID
+  createdAt: DateTime
+  modifiedAt: DateTime
+  createdBy: User
+  lastUpdatedBy: User
+  canUpdate: Boolean
+  canDelete: Boolean
+}
+
+type FileFormConnection {
+  totalCount: Int
+  edges: [FileFormEdge]
+  pageInfo: PageInfo
+  _source: ID
+}
+
+type FileFormEdge {
+  node: FileForm
+  cursor: ID!
+  meta: JSON
+}
+
+type FilterForm {
+  id: ID
+  incrementalId: ID
+  form(display: Boolean): ID
+  createdAt: DateTime
+  modifiedAt: DateTime
+  createdBy: User
+  lastUpdatedBy: User
+  canUpdate: Boolean
+  canDelete: Boolean
+}
+
+type FilterFormConnection {
+  totalCount: Int
+  edges: [FilterFormEdge]
+  pageInfo: PageInfo
+  _source: ID
+}
+
+type FilterFormEdge {
+  node: FilterForm
+  cursor: ID!
+  meta: JSON
+}
+
+type Form {
+  id: ID
+  name: String
+  queryName: String
+  createdAt: String
+  modifiedAt: String
+  structure: JSON
+  status: Status
+  permissions: Access
+  resource: Resource
+  core: Boolean
+  records(first: Int, afterCursor: ID, filter: JSON, archived: Boolean): RecordConnection
+  recordsCount: Int
+  versionsCount: Int
+  versions: [Version]
+  fields: JSON
+  canSee: Boolean
+  canUpdate: Boolean
+  canDelete: Boolean
+  canCreateRecords: Boolean
+  uniqueRecord: Record
+  layouts(first: Int, afterCursor: ID, ids: [ID]): LayoutConnection
+  metadata: [FieldMetaData]
+}
+
+type Group {
+  id: ID
+  title: String
+  description: String
+  usersCount: Int
+}
+
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON
+
+type Layout {
+  id: ID
+  name: String
+  createdAt: String
+  query: JSON
+  display: JSON
+}
+
+type LayoutConnection {
+  totalCount: Int
+  edges: [LayoutEdge]
+  pageInfo: PageInfo
+}
+
+type LayoutEdge {
+  node: Layout
+  cursor: ID!
+  meta: JSON
+}
+
+type MyFormSecond {
+  question2: String
+  question1: String
+  id: ID
+  incrementalId: ID
+  form(display: Boolean): ID
+  createdAt: DateTime
+  modifiedAt: DateTime
+  createdBy: User
+  lastUpdatedBy: User
+  canUpdate: Boolean
+  canDelete: Boolean
+  field_my_second(filter: JSON, sortField: String, sortOrder: String, first: Int): [Qqqqqq]
+}
+
+type MyFormSecondConnection {
+  totalCount: Int
+  edges: [MyFormSecondEdge]
+  pageInfo: PageInfo
+  _source: ID
+}
+
+type MyFormSecondEdge {
+  node: MyFormSecond
+  cursor: ID!
+  meta: JSON
+}
+
+type NewForm {
+  id: ID
+  incrementalId: ID
+  form(display: Boolean): ID
+  createdAt: DateTime
+  modifiedAt: DateTime
+  createdBy: User
+  lastUpdatedBy: User
+  canUpdate: Boolean
+  canDelete: Boolean
+}
+
+type NewFormConnection {
+  totalCount: Int
+  edges: [NewFormEdge]
+  pageInfo: PageInfo
+  _source: ID
+}
+
+type NewFormEdge {
+  node: NewForm
+  cursor: ID!
+  meta: JSON
+}
+
+type Page {
+  id: ID
+  name: String
+  createdAt: String
+  modifiedAt: String
+  type: ContentEnumType
+  content: ID
+  permissions: Access
+  application: Application
+  canSee: Boolean
+  canUpdate: Boolean
+  canDelete: Boolean
+}
+
+type PageInfo {
+  startCursor: ID
+  endCursor: ID
+  hasNextPage: Boolean
+}
+
+type Permission {
+  id: ID
+  type: String
+  global: Boolean
+}
+
+type PositionAttribute {
+  value: String
+  category: PositionAttributeCategory
+  usersCount: Int
+}
+
+type PositionAttributeCategory {
+  id: ID
+  title: String
+  application: Application
+}
+
+type PullJob {
+  id: ID
+  name: String
+  status: Status
+  apiConfiguration: ApiConfiguration
+  url: String
+  path: String
+  schedule: String
+  convertTo: Form
+  mapping: JSON
+  uniqueIdentifiers: [String]
+  channel: Channel
+}
+
+type Qqqqqq {
+  field_1: String
+  field_2: String
+  field_3(display: Boolean): String
+  qqq_resorce_ids: [ID]
+  id: ID
+  incrementalId: ID
+  form(display: Boolean): ID
+  createdAt: DateTime
+  modifiedAt: DateTime
+  createdBy: User
+  lastUpdatedBy: User
+  canUpdate: Boolean
+  canDelete: Boolean
+  qqq_resorce(filter: JSON, sortField: String, sortOrder: String, first: Int): [MyFormSecond]
+  qqq_field_1(filter: JSON, sortField: String, sortOrder: String, first: Int): [FieldForm]
+}
+
+type QqqqqqConnection {
+  totalCount: Int
+  edges: [QqqqqqEdge]
+  pageInfo: PageInfo
+  _source: ID
+}
+
+type QqqqqqEdge {
+  node: Qqqqqq
+  cursor: ID!
+  meta: JSON
+}
+
+type Query {
+  Dataset(id: ID!, display: Boolean): Dataset
+  allDatasets(first: Int, afterCursor: ID, skip: Int, sortField: String, sortOrder: String, filter: JSON, display: Boolean, styles: JSON): DatasetConnection
+  _DatasetMeta: _DatasetMeta
+  _allDatasetsMeta: _DatasetMeta
+  ChoicesByUrl(id: ID!, display: Boolean): ChoicesByUrl
+  allChoicesByUrls(first: Int, afterCursor: ID, skip: Int, sortField: String, sortOrder: String, filter: JSON, display: Boolean, styles: JSON): ChoicesByUrlConnection
+  _ChoicesByUrlMeta: _ChoicesByUrlMeta
+  _allChoicesByUrlsMeta: _ChoicesByUrlMeta
+  TestForm(id: ID!, display: Boolean): TestForm
+  allTestForms(first: Int, afterCursor: ID, skip: Int, sortField: String, sortOrder: String, filter: JSON, display: Boolean, styles: JSON): TestFormConnection
+  _TestFormMeta: _TestFormMeta
+  _allTestFormsMeta: _TestFormMeta
+  WorkflowForm(id: ID!, display: Boolean): WorkflowForm
+  allWorkflowForms(first: Int, afterCursor: ID, skip: Int, sortField: String, sortOrder: String, filter: JSON, display: Boolean, styles: JSON): WorkflowFormConnection
+  _WorkflowFormMeta: _WorkflowFormMeta
+  _allWorkflowFormsMeta: _WorkflowFormMeta
+  FileForm(id: ID!, display: Boolean): FileForm
+  allFileForms(first: Int, afterCursor: ID, skip: Int, sortField: String, sortOrder: String, filter: JSON, display: Boolean, styles: JSON): FileFormConnection
+  _FileFormMeta: _FileFormMeta
+  _allFileFormsMeta: _FileFormMeta
+  FilterForm(id: ID!, display: Boolean): FilterForm
+  allFilterForms(first: Int, afterCursor: ID, skip: Int, sortField: String, sortOrder: String, filter: JSON, display: Boolean, styles: JSON): FilterFormConnection
+  _FilterFormMeta: _FilterFormMeta
+  _allFilterFormsMeta: _FilterFormMeta
+  NewForm(id: ID!, display: Boolean): NewForm
+  allNewForms(first: Int, afterCursor: ID, skip: Int, sortField: String, sortOrder: String, filter: JSON, display: Boolean, styles: JSON): NewFormConnection
+  _NewFormMeta: _NewFormMeta
+  _allNewFormsMeta: _NewFormMeta
+  Qqqqqq(id: ID!, display: Boolean): Qqqqqq
+  allQqqqqqs(first: Int, afterCursor: ID, skip: Int, sortField: String, sortOrder: String, filter: JSON, display: Boolean, styles: JSON): QqqqqqConnection
+  _QqqqqqMeta: _QqqqqqMeta
+  _allQqqqqqsMeta: _QqqqqqMeta
+  MyFormSecond(id: ID!, display: Boolean): MyFormSecond
+  allMyFormSeconds(first: Int, afterCursor: ID, skip: Int, sortField: String, sortOrder: String, filter: JSON, display: Boolean, styles: JSON): MyFormSecondConnection
+  _MyFormSecondMeta: _MyFormSecondMeta
+  _allMyFormSecondsMeta: _MyFormSecondMeta
+  FieldForm(id: ID!, display: Boolean): FieldForm
+  allFieldForms(first: Int, afterCursor: ID, skip: Int, sortField: String, sortOrder: String, filter: JSON, display: Boolean, styles: JSON): FieldFormConnection
+  _FieldFormMeta: _FieldFormMeta
+  _allFieldFormsMeta: _FieldFormMeta
+  AggregationForm1(id: ID!, display: Boolean): AggregationForm1
+  allAggregationForm1s(first: Int, afterCursor: ID, skip: Int, sortField: String, sortOrder: String, filter: JSON, display: Boolean, styles: JSON): AggregationForm1Connection
+  _AggregationForm1Meta: _AggregationForm1Meta
+  _allAggregationForm1sMeta: _AggregationForm1Meta
+  AggregationForm2(id: ID!, display: Boolean): AggregationForm2
+  allAggregationForm2s(first: Int, afterCursor: ID, skip: Int, sortField: String, sortOrder: String, filter: JSON, display: Boolean, styles: JSON): AggregationForm2Connection
+  _AggregationForm2Meta: _AggregationForm2Meta
+  _allAggregationForm2sMeta: _AggregationForm2Meta
+  SecondFieldForm(id: ID!, display: Boolean): SecondFieldForm
+  allSecondFieldForms(first: Int, afterCursor: ID, skip: Int, sortField: String, sortOrder: String, filter: JSON, display: Boolean, styles: JSON): SecondFieldFormConnection
+  _SecondFieldFormMeta: _SecondFieldFormMeta
+  _allSecondFieldFormsMeta: _SecondFieldFormMeta
+  CountriesRef: [CountriesRef]
+  TestCountryRef: [TestCountryRef]
+  RestTestRef: [RestTestRef]
+  _CountriesRefMeta: _CountriesRefMeta
+  _TestCountryRefMeta: _TestCountryRefMeta
+  _RestTestRefMeta: _RestTestRefMeta
+}
+
+type Record {
+  id: ID
+  incrementalId: ID
+  createdAt: String
+  modifiedAt: String
+  archived: Boolean
+  form: Form
+  data(display: Boolean): JSON
+  versions: [Version]
+  createdBy: User
+  modifiedBy: User
+  validationErrors: [ValidationError]
+}
+
+type RecordConnection {
+  totalCount: Int
+  edges: [RecordEdge]
+  pageInfo: PageInfo
+}
+
+type RecordEdge {
+  node: Record
+  cursor: ID!
+  meta: JSON
+}
+
+type Resource {
+  id: ID
+  name: String
+  queryName: String
+  createdAt: String
+  permissions: Access
+  rolePermissions(role: ID!): JSON
+  forms: [Form]
+  relatedForms: [Form]
+  coreForm: Form
+  records(first: Int, afterCursor: ID, filter: JSON, archived: Boolean): RecordConnection
+  recordsCount: Int
+  fields: JSON
+  canCreateRecords: Boolean
+  canSee: Boolean
+  canUpdate: Boolean
+  canDelete: Boolean
+  layouts(first: Int, afterCursor: ID, ids: [ID]): LayoutConnection
+  aggregations(first: Int, afterCursor: ID, ids: [ID]): AggregationConnection
+  metadata: [FieldMetaData]
+}
+
+type RestTestRef {
+  test: String
+}
+
+type Role {
+  id: ID
+  title(appendApplicationName: Boolean): String
+  description: String
+  permissions: [Permission]
+  usersCount: Int
+  application: Application
+  channels: [Channel]
+  users(first: Int, afterCursor: ID, automated: Boolean): UserConnection
+  autoAssignment: JSON
+}
+
+type SecondFieldForm {
+  question1: String
+  question2: String
+  question3_id: ID
+  id: ID
+  incrementalId: ID
+  form(display: Boolean): ID
+  createdAt: DateTime
+  modifiedAt: DateTime
+  createdBy: User
+  lastUpdatedBy: User
+  canUpdate: Boolean
+  canDelete: Boolean
+  question3: Qqqqqq
+}
+
+type SecondFieldFormConnection {
+  totalCount: Int
+  edges: [SecondFieldFormEdge]
+  pageInfo: PageInfo
+  _source: ID
+}
+
+type SecondFieldFormEdge {
+  node: SecondFieldForm
+  cursor: ID!
+  meta: JSON
+}
+
+enum Status {
+  active
+  pending
+  archived
+}
+
+type Template {
+  id: ID
+  name: String
+  type: String
+  content: JSON
+}
+
+type TestCountryRef {
+  name: String
+}
+
+type TestForm {
+  test: String
+  id: ID
+  incrementalId: ID
+  form(display: Boolean): ID
+  createdAt: DateTime
+  modifiedAt: DateTime
+  createdBy: User
+  lastUpdatedBy: User
+  canUpdate: Boolean
+  canDelete: Boolean
+}
+
+type TestFormConnection {
+  totalCount: Int
+  edges: [TestFormEdge]
+  pageInfo: PageInfo
+  _source: ID
+}
+
+type TestFormEdge {
+  node: TestForm
+  cursor: ID!
+  meta: JSON
+}
+
+type User {
+  id: ID
+  username: String
+  name: String
+  firstName: String
+  lastName: String
+  oid: String
+  favoriteApp: ID
+  isAdmin: Boolean
+  roles: [Role]
+  groups: [Group]
+  permissions: [Permission]
+  applications: [Application]
+  positionAttributes: [PositionAttribute]
+  attributes: JSON
+}
+
+type UserConnection {
+  totalCount: Int
+  edges: [UserEdge]
+  pageInfo: PageInfo
+}
+
+type UserEdge {
+  node: User
+  cursor: ID!
+  meta: JSON
+}
+
+type UserMeta {
+  id: JSON
+  username: JSON
+  name: JSON
+}
+
+type ValidationError {
+  question: String
+  errors: [String]
+}
+
+type Version {
+  id: ID
+  createdAt: String
+  data: JSON
+  createdBy: User
+}
+
+type WorkflowForm {
+  id: ID
+  incrementalId: ID
+  form(display: Boolean): ID
+  createdAt: DateTime
+  modifiedAt: DateTime
+  createdBy: User
+  lastUpdatedBy: User
+  canUpdate: Boolean
+  canDelete: Boolean
+}
+
+type WorkflowFormConnection {
+  totalCount: Int
+  edges: [WorkflowFormEdge]
+  pageInfo: PageInfo
+  _source: ID
+}
+
+type WorkflowFormEdge {
+  node: WorkflowForm
+  cursor: ID!
+  meta: JSON
+}
