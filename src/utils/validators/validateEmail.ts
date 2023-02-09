@@ -1,5 +1,5 @@
 /** Regex pattern for email */
-const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?)*(\.\w{2,3})+$/;
 
 /**
  * Util method to check if a string can be considered as email.

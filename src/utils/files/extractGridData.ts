@@ -43,7 +43,7 @@ export const extractGridData = async (
   const gqlTotalCountQuery = fetch(`${config.get('server.url')}/graphql`, {
     method: 'POST',
     body: JSON.stringify({
-      query: totalCountQuery,
+      test: totalCountQuery,
       variables: {
         filter: params.filter,
       },
