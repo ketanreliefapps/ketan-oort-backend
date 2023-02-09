@@ -37,6 +37,7 @@ export const extractGridData = async (
   const buildQ = buildQuery(params.query);
   const metaQuery = buildMetaQuery(params.query);
 
+  
   let meta: any;
   let totalCount = 0;
 
