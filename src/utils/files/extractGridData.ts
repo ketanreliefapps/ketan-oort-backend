@@ -97,7 +97,7 @@ export const extractGridData = async (
       fetch(`${config.get('server.url')}/graphql`, {
         method: 'POST',
         body: JSON.stringify({
-          query: buildData,
+          ddd: buildData,
           variables: {
             first: PAGE_SIZE,
             skip: i * PAGE_SIZE,
