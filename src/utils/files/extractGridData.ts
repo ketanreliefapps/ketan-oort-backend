@@ -34,10 +34,9 @@ export const extractGridData = async (
   token: string
 ): Promise<{ columns: any[]; rows: any[] }> => {
   const totalCountQuery = buildTotalCountQuery(params.query);
-  const buildQ = buildQuery(params.query);
+  const buildData = buildQuery(params.query);
   const metaQuery = buildMetaQuery(params.query);
 
-  
   let meta: any;
   let totalCount = 0;
 
@@ -98,7 +97,7 @@ export const extractGridData = async (
       fetch(`${config.get('server.url')}/graphql`, {
         method: 'POST',
         body: JSON.stringify({
-          query: buildQ,
+          query: buildData,
           variables: {
             first: PAGE_SIZE,
             skip: i * PAGE_SIZE,
